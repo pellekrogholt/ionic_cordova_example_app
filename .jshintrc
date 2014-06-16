@@ -1,0 +1,27 @@
+{
+  "bitwise":  true,
+  "eqeqeq": true,
+  "forin":  true,
+  "nonew": true,
+  "plusplus": true,
+  "globalstrict": true,
+  "globals": {
+    "angular": false,
+
+    "module": false,
+    "inject": false,
+    "require": false,
+
+    "navigator": false,
+
+    "browser": false,
+    "element": false,
+    "by": false,
+
+    "describe": false,
+    "beforeEach": false,
+    "it": false,
+    "xit": false,
+    "expect": false
+  }
+}
