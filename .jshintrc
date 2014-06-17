@@ -13,6 +13,11 @@
     "require": false,
 
     "navigator": false,
+    "window": false,
+    "cordova": false,
+    "StatusBar": false,           
+    "document": false,
+
 
     "browser": false,
     "element": false,

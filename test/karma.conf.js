@@ -3,9 +3,6 @@ module.exports = function(config){
 
     basePath : '../',
 
-
-    // todo: enable when seeting up ng-cordiova
-    //   'www/lib/ng-cordova/dist/ng-cordova.js',
     files: [
       // Include jQuery only for testing convience (lots of DOM checking for unit tests on directives
       'http://codeorigin.jquery.com/jquery-1.10.2.min.js',
@@ -14,6 +11,7 @@ module.exports = function(config){
       'www/lib/angular-sanitize/angular-sanitize.js',
       'www/lib/angular-mocks/angular-mocks.js',      
       'www/lib/angular-ui-router/release/angular-ui-router.js',
+      'www/lib/ng-cordova/dist/ng-cordova.js',
       'www/lib/ionic/js/ionic.bundle.js',
       'www/lib/ionic/js/ionic-angular.js',
       'www/js/**/*.js',
