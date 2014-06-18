@@ -51,7 +51,7 @@
           // TypeError: Cannot read property 'type' of undefined
           // at Object.getNetwork (file:///android_asset/www/lib/ng-cordova/dist/ng-cordova.js:851:34)
           // ...          
-          $log.log('$cordovaNetwork.isOnline()', e);
+          $log.log('$cordovaNetwork.getNetwork()', e);
         };
         
         $scope.connectionType = function () {        
