@@ -9,9 +9,12 @@
 // note:
 // many of the plugins has angualr friendly wrapper for injection!/
 // http://ngcordova.com/docs/
+
+
+// org.apache.cordova.network-information
 var pluginlist = [
   "com.ionic.keyboard",
-  "org.apache.cordova.network-information",
+  "https://github.com/apache/cordova-plugin-network-information",
   "org.apache.cordova.device",
   "org.apache.cordova.statusbar",
   "org.apache.cordova.console"

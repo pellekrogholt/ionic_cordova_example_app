@@ -42,12 +42,18 @@
         var connectionType = 'undefined';
         $scope.connectiontype = connectionType;
 
-        //$log.log($cordovaNetwork.getNetwork());
-        // ->
-        // TypeError: Cannot read property 'type' of undefined
-        // at Object.getNetwork (file:///android_asset/www/lib/ng-cordova/dist/ng-cordova.js:851:34)
-        // ...
-
+        try {
+          $log.log($cordovaNetwork.getNetwork());
+          $scope.connectiontype = $cordovaNetwork.getNetwork();
+        } catch (e) {
+          // probably:
+          // ->
+          // TypeError: Cannot read property 'type' of undefined
+          // at Object.getNetwork (file:///android_asset/www/lib/ng-cordova/dist/ng-cordova.js:851:34)
+          // ...          
+          $log.log('$cordovaNetwork.isOnline()', e);
+        };
+        
         $scope.connectionType = function () {        
           $scope.connectiontype = $cordovaNetwork.getNetwork();
         };
@@ -64,9 +70,14 @@
         var connectionType = 'undefined';
         $scope.connectiontype = connectionType;
         
-        Cordova.navigator().then(function(navigator) {          
+        Cordova.navigator().then(function(navigator) {
+          $log.log(navigator);
+          // console:
+          // V CordovaNavigator
+          //   > connection: NetworkConnection 
           $log.log(navigator.connection);
-          // -> undefined
+          // console:          
+          // > undefined
 
           if (navigator.connection !== undefined) {
             $log.log(navigator.connection.type);
